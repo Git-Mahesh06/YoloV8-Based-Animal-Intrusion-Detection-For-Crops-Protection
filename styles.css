@@ -1,0 +1,189 @@
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+
+    /* Add an animated background */
+    animation: changeBackground 15s infinite;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Background animation with 5 images */
+@keyframes changeBackground {
+    0% {
+        background-image: url('/static/images/bg1.jpg');
+    }
+
+    20% {
+        background-image: url('/static/images/bg2.jpg');
+    }
+
+    40% {
+        background-image: url('/static/images/bg3.jpg');
+    }
+
+    60% {
+        background-image: url('/static/images/bg4.jpg');
+    }
+
+    80% {
+        background-image: url('/static/images/bg5.jpg');
+    }
+
+    100% {
+        background-image: url('/static/images/bg1.jpg');
+    }
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    background: rgba(33, 32, 32, 0.6);
+    padding: 50px;
+    /* Increased padding for more content space */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    /* Ensure it appears above the background */
+
+    /* Set explicit width and height */
+    width: 60%;
+    /* Takes 80% of the viewport width */
+    max-width: 800px;
+    /* Prevents it from becoming too wide */
+    height: auto;
+    /* Adjust height dynamically based on content */
+
+    /* Center the container */
+    margin: auto;
+}
+
+/* Dynamic Heading */
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #f5f1f5cf;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 2px 2px 5px rgba(255, 221, 87, 0.5);
+    }
+
+    to {
+        text-shadow: 2px 2px 20px rgba(255, 221, 87, 1);
+    }
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #cce7ff;
+}
+
+/* Button Styling */
+.dynamic-button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background: #04da32;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(5, 5, 6, 0.3);
+}
+
+.dynamic-button:hover {
+    background: #000000;
+    box-shadow: 0 6px 15px rgba(5, 161, 52, 0.5);
+    transform: translateY(-2px);
+}
+
+.dynamic-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 7px rgba(0, 123, 255, 0.3);
+}
+
+/* Video Container Styling */
+.video-container {
+    margin-top: 20px;
+    border: 3px solid #fbfffc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 700px;
+    /* Fixed width */
+    height: 500px;
+    /* Fixed height */
+    background: rgba(0, 0, 0, 0.8);
+    /* Placeholder */
+    display: none;
+    /* Hidden by default */
+    animation: fadeIn 1s ease-in-out;
+}
+
+#video-stream {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: auto;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Alert Box Styling */
+#alert-box {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    display: none;
+    z-index: 1000;
+}
+
+/* Instructions Section */
+.instructions {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 1rem;
+    color: #cce7ff;
+    line-height: 1.6;
+}
+
+.instructions ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin: 5px 0;
+}

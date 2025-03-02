@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Detection System</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="background"></div> <!-- Dynamic Background -->
+    <div class="container">
+        <h1> Animal Intrusion Detection</h1>
+        <p>Please Click the button below to start the real-time detection video stream.</p>
+        
+        <!-- Start Detection Button -->
+        <button id="start-detection" class="dynamic-button">Start Detection</button>
+
+        <!-- Video Stream Container -->
+        <div class="video-container" id="video-container">
+            <img id="video-stream" src="" alt="Live Video Stream">
+        </div>
+
+        <!-- Instructions Section -->
+        <div id="instructions" class="instructions">
+            <p><strong>Controls:</strong></p>
+            <ul>
+                <li>Click "Start Detection" to begin the live video stream.</li>
+                <li>Press <strong>Q</strong> to stop the video stream and release the camera.</li>
+            </ul>
+        </div>
+
+        <!-- Alert Box (for dynamic messages) -->
+        <div id="alert-box"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
